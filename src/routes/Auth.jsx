@@ -1,5 +1,4 @@
-import React from 'react'
-import { supabase } from '../lib/client'
+import { supabase } from '@/lib/client'
 
 function Auth() {
   const handleSignIn = async () => {

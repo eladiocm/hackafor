@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { supabase } from './lib/client'
+import { supabase } from '@/lib/client'
 
 function App() {
   const [user, setUser] = useState()
