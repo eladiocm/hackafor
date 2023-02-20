@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
-import Auth from './Auth'
+import Auth from '../components/Auth/Auth'
 
 const router = createBrowserRouter([
   {
