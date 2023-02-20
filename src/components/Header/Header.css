@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px 0 10%; 
+    height: 100px;
+    margin-bottom: 2rem;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.user-logged-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.user-logged-info img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
