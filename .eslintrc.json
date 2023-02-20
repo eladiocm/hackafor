@@ -16,7 +16,8 @@
     "react/react-in-jsx-scope": "off",
     "indent": "off",
     "space-before-function-paren": "off",
-    "multiline-ternary": "off"
+    "multiline-ternary": "off",
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {
