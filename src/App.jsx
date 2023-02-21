@@ -1,6 +1,7 @@
 import { Header } from './components/Header/Header'
 import { Projects } from './components/Projects/Projects'
 import { useGetUser } from './hooks/useGetUser'
+import GridContainer from './components/Containers/GridContainer'
 
 // CSS Styles
 import './styles/index.css'
@@ -12,7 +13,9 @@ function App() {
     <>
       <Header user={user} />
       <main>
-        <Projects />
+        <GridContainer>
+          <Projects />
+        </GridContainer>
       </main>
     </>
   )

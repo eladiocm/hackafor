@@ -1,31 +1,36 @@
-import { SaveIcons } from '../Icons'
 import './Card.css'
+import { SaveIcons } from '../Icons'
 
-export function Card() {
+function Card({ title, avatar, userName, technologies, likes, pageImage }) {
   return (
     <div className='card'>
-      <div className='img'>
-        <img src='../../../public/page.png' alt='' />
+      {/** Probably this image will be replaced with Cloudinary SDK */}
+      <figure className='img'>
+        <img src={pageImage} alt={''} />
         <div className='save'>
           <SaveIcons />
         </div>
-      </div>
+      </figure>
 
-      <div className='text'>
-        <p className='h3'> Name Project </p>
+      <div className='card-main'>
+        <h3 className='h3'>{title}</h3>
         <div className='card-info-creator'>
-          <p>creado por</p>
+          <p>Creado por</p>
           <div className='info-user'>
-            <img src='../../../public/88462463.png' alt='' />
-            <p className='p'>UserName </p>
+            <img src={avatar} alt={`Avatar of ${userName}`} />
+            <p className='p'>{userName}</p>
           </div>
         </div>
+
         <div className='card-technology-project'>
-          <div>React</div>
-          <div>SQL</div>
-          <div>TypeScript</div>
+          {/** Each Technology tag can be a component */}
+          {technologies?.map((technology, index) => {
+            return <div key={index}>{technology}</div>
+          })}
         </div>
       </div>
     </div>
   )
 }
+
+export default Card

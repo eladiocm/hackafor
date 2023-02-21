@@ -9,20 +9,15 @@
 } */
 
 .card {
-  width: 90%;
-  padding: 14px 8px;
-  background: #101010;
-  box-shadow: 1px 1px 10px #2928285e;
-  border: 1px solid #000;
-  border-radius: 5px;
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-  margin: 0 auto;
+  padding: 8px;
+  background: #16191d;
+  border: 1px solid #202328;
+  border-radius: 4px;
 }
 
 .card-technology-project {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
@@ -30,8 +25,9 @@
 .card-technology-project div {
   background: #d9d9d9;
   color: #000;
-  padding: 2px 16px 4px 16px;
-  border-radius: 20px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
 }
 
 .img {
@@ -42,6 +38,9 @@
 
 .img img {
   width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .save {
@@ -57,10 +56,25 @@
   position: absolute;
 }
 
+.save svg {
+  transition: 0.2s ease-in-out;
+  width: 20px;
+  height: 20px;
+}
+
+.save:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.save:hover svg {
+  fill: #ced8de;
+}
+
 .card-info-creator {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 12px;
 }
 
 .card-info-creator p {
@@ -68,46 +82,12 @@
   color: #c2c2c2;
 }
 
-.text {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: space-around;
-  gap: 8px;
-}
-
-.save svg {
-  transition: 0.2s ease-in-out;
-  width: 20px;
-  height: 20px;
-}
-
-.icon-box {
-  margin-top: 15px;
-  width: 70%;
-  padding: 10px;
-  background-color: #e3fff9;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-.icon-box svg {
-  width: 17px;
-}
-
-.text .h3 {
-  font-family: 'Lucida Sans' sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-}
-
 .info-user {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 .info-user img {
   width: 25px;
   border-radius: 50%;
@@ -125,15 +105,9 @@
   font-weight: light;
 }
 
-/* .card:hover {
-  cursor: pointer;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-} */
-
-.save:hover {
-  transform: scale(1.1) rotate(10deg);
-}
-
-.save:hover svg {
-  fill: #ced8de;
+.card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 8px;
 }
