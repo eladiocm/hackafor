@@ -19,7 +19,7 @@
   color: #fff;
   text-decoration: none;
   margin: 0 auto;
-} 
+}
 
 .card-technology-project {
   display: flex;
@@ -30,9 +30,8 @@
 .card-technology-project div {
   background: #d9d9d9;
   color: #000;
-  padding: 2px 16px 4px 16px; 
+  padding: 2px 16px 4px 16px;
   border-radius: 20px;
-
 }
 
 .img {
@@ -138,4 +137,3 @@
 .save:hover svg {
   fill: #ced8de;
 }
-
