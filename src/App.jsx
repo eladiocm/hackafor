@@ -1,6 +1,6 @@
 import { Header } from './components/Header/Header'
 import { Projects } from './components/Projects/Projects'
-import useUserSession from './hooks/useGetUser'
+import useUserSession from './hooks/useUserSession'
 import GridContainer from './components/Containers/GridContainer'
 
 // CSS Styles

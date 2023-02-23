@@ -1,12 +1,9 @@
 import { supabase } from '@/lib/client'
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router'
 
 function useUserSession() {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(false)
-
-  const navigate = useNavigate()
 
   useEffect(() => {
     const getSession = async () => {
@@ -23,7 +20,7 @@ function useUserSession() {
     }
 
     getSession()
-  }, [navigate])
+  }, [])
 
   return { user, loading }
 }
