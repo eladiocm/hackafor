@@ -1,6 +1,6 @@
 import { Header } from './components/Header/Header'
 import { Projects } from './components/Projects/Projects'
-import { useGetUser } from './hooks/useGetUser'
+import useUserSession from './hooks/useGetUser'
 import GridContainer from './components/Containers/GridContainer'
 
 // CSS Styles
@@ -8,7 +8,8 @@ import './styles/index.css'
 import './styles/normalize.css'
 
 function App() {
-  const { user } = useGetUser()
+  const { user } = useUserSession()
+
   return (
     <>
       <Header user={user} />
