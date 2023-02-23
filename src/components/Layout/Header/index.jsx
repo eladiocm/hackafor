@@ -8,14 +8,10 @@ import useOnClickOutside from '@/hooks/useOnClickOutside'
 
 function Auth() {
   const [isOpen, setIsOpen] = useState(false)
-  const { loading, user } = useUserSession()
+  const { user } = useUserSession()
   const navigate = useNavigate()
   const ref = useRef()
   useOnClickOutside(ref, () => setIsOpen(false))
-
-  if (loading) {
-    return <button className={styles.btn}>Cargando...</button>
-  }
 
   if (!user) {
     return (
