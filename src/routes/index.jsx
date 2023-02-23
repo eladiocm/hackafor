@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 import Auth from '../components/Auth/Auth'
+import Create from './Create'
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
   {
     path: '/auth',
     element: <Auth />
+  },
+  {
+    path: '/create',
+    element: <Create />
   }
 ])
 

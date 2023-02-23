@@ -13,7 +13,7 @@ export const Header = ({ user }) => {
   }
 
   return (
-    <header>
+    <header className='header'>
       <nav className='nav'>
         <Link to='/' className='logo'>
           <h1>Home Page</h1>

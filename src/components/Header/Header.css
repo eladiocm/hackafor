@@ -1,3 +1,9 @@
+.header {
+  height: 350px;
+  background: #686ce9;
+  margin-bottom: 60px;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -142,21 +148,26 @@
   .search-filter-technology {
     display: none !important;
   }
+
   .search {
     display: flex;
     justify-content: space-between;
     margin: 0 20px;
   }
+
   .search-button {
     max-width: 75px;
     margin-left: 16px;
   }
+
   .search {
     min-width: 250px;
   }
+
   .add-project-button {
     padding: 0 10px 2px 10px;
   }
+
   .add-project-button span {
     display: none;
   }
