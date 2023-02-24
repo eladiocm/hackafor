@@ -1,14 +1,29 @@
 body {
-  background: #1c1917;
+  background: var(--bg-primary);
+  color: var(--white);
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji',
     sans-serif;
-  color: #fff;
 }
 
 main {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 64px auto;
+}
+
+:root {
+  --bg-primary: #0c0e10;
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #eaeaeb;
+  --gray-200: #cacbcd;
+  --gray-300: #a7a9ac;
+  --gray-400: #696c71;
+  --gray-500: #282d34;
+  --gray-600: #24292f;
+  --gray-700: #181b20;
+  --gray-800: #121518;
+  --gray-900: #0c0e10;
 }
