@@ -26,4 +26,6 @@ main {
   --gray-700: #181b20;
   --gray-800: #121518;
   --gray-900: #0c0e10;
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
