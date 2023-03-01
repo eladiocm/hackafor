@@ -1,15 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './card.module.css'
 
-function Card({
-  id,
-  title,
-  avatar,
-  description,
-  userName,
-  technologies,
-  pageImage
-}) {
+function Card({ id, title, description, userName, technologies, pageImage }) {
   return (
     <Link to={`/project/${id}`} className={styles.card}>
       <figure className={styles.card__header}>
@@ -29,15 +21,7 @@ function Card({
         </div>
       </div>
       <footer className={styles.card__footer}>
-        <p>Creado por</p>
-        <div className={styles.card__footer_author}>
-          <img
-            src={avatar}
-            alt={`Avatar of ${userName}`}
-            className={styles.avatar}
-          />
-          <p>{userName}</p>
-        </div>
+        <p>Creado por {userName}</p>
       </footer>
     </Link>
   )

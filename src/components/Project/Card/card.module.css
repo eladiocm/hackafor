@@ -82,14 +82,3 @@
   color: var(--gray-200);
   font-size: 14px;
 }
-
-.card__footer_author {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.avatar {
-  border-radius: 50%;
-  width: 25px;
-}

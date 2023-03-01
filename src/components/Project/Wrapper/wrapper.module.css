@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   gap: 12px;
-  padding-inline: 12px;
+  margin-top: 24px;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
