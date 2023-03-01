@@ -5,6 +5,7 @@
   top: 0;
   z-index: 50;
   background: var(--gray-900);
+  backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--gray-500);
 }
 
@@ -15,7 +16,7 @@
   height: 100%;
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: 12px;
+  padding-inline: 16px;
 }
 
 .logo {

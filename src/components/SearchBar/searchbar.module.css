@@ -1,0 +1,28 @@
+.searchBar {
+  display: flex;
+  background-color: var(--gray-600);
+  box-shadow: var(--shadow-xl);
+  border-radius: 4px;
+  border: 2px solid var(--gray-500);
+  margin-top: 24px;
+}
+
+.searchBar:focus-within {
+  border: 2px solid #2563eb;
+}
+
+.searchBar > input {
+  width: 100%;
+  margin: 4px;
+  padding: 8px 16px;
+  background-color: inherit;
+  outline: none;
+}
+
+.searchBar > button {
+  margin: 4px;
+  padding: 8px;
+  background-color: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 4px;
+}
