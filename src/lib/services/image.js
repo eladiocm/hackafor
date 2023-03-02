@@ -8,11 +8,15 @@ const BUCKET_URL =
 export async function uploadImage(file) {
   const filename = `${uuidv4()}-${file.name}`
 
-  const { data } = await supabase.storage
+  const { data, error } = await supabase.storage
     .from('hackafor')
     .upload(filename, file, {
       upsert: false
     })
+
+  if (error) {
+    throw error
+  }
 
   return BUCKET_URL + data.path
 }

@@ -6,7 +6,12 @@ const Input = forwardRef(({ labelText, type = 'text', ...props }, ref) => {
   return (
     <label className={styles.label}>
       {labelText}
-      <input ref={ref} type={type} className={styles.textInput} {...props} />
+      <input
+        ref={ref}
+        type={type}
+        className={type === 'file' ? styles.fileInput : styles.textInput}
+        {...props}
+      />
     </label>
   )
 })

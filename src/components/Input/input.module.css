@@ -20,3 +20,20 @@
   outline: #2563eb;
   border: 2px solid #2563eb;
 }
+
+.fileInput::-webkit-file-upload-button {
+  background-color: #2563eb;
+  border: 1px solid transparent;
+  padding: 10px;
+  margin-right: 12px;
+  color: var(--white);
+}
+
+.fileInput {
+  width: 100%;
+  margin-top: 4px;
+  background-color: var(--gray-600);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--gray-500);
+  border-radius: 4px;
+}

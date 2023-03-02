@@ -6,15 +6,18 @@ import Layout from '@/components/Layout'
 import Input from '@/components/Input'
 
 import { createSchema } from '@/lib/validation'
-import { supabase } from '@/lib/client'
 import { uploadImage } from '@/lib/services/image'
+import { createProject } from '@/lib/services/project'
 
 import { useNavigate } from 'react-router-dom'
 import useUserSession from '@/hooks/useUserSession'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
+import { useState } from 'react'
+import ButtonLoader from '@/components/Loaders/ButtonLoader'
 
 function Create() {
+  const [isSending, setIsSending] = useState(false)
   const { user } = useUserSession()
   const navigate = useNavigate()
 
@@ -27,24 +30,18 @@ function Create() {
   })
 
   const onSubmit = async (data) => {
-    const imageUrl = await uploadImage(data.file[0])
-    const technologies = data.technologies.split(',')
+    setIsSending(true)
 
-    const { data: project } = await supabase
-      .from('project')
-      .insert({
-        user_id: user.id,
-        title: data.title,
-        description: data.description,
-        image_url: imageUrl,
-        page_url: data.page_url,
-        github_url: data.github_url,
-        technologies
-      })
-      .select('id')
-      .single()
+    try {
+      const imageUrl = await uploadImage(data.file[0])
+      const projectId = await createProject(data, imageUrl, user.id)
 
-    navigate(`/project/${project.id}`)
+      setIsSending(false)
+      navigate(`/project/${projectId}`)
+    } catch (error) {
+      setIsSending(false)
+      console.error(error)
+    }
   }
 
   return (
@@ -98,8 +95,12 @@ function Create() {
         />
         <p className={styles.error_message}>{errors.file?.message}</p>
 
-        <button type='submit' className={styles.submit_btn}>
-          Submit
+        <button
+          type='submit'
+          className={styles.submit_btn}
+          disabled={isSending}
+        >
+          {isSending ? <ButtonLoader /> : 'Submit'}
         </button>
       </form>
     </Layout>
