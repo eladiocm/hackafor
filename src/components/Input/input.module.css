@@ -1,0 +1,22 @@
+.label {
+  display: block;
+  margin-block: 12px;
+  color: var(--gray-200);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.textInput {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 16px;
+  background-color: var(--gray-600);
+  box-shadow: var(--shadow-xl);
+  border-radius: 4px;
+  border: 2px solid var(--gray-500);
+}
+
+.textInput:focus {
+  outline: #2563eb;
+  border: 2px solid #2563eb;
+}
